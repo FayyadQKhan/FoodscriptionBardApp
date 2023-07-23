@@ -1,5 +1,5 @@
+--upgrade pip
 streamlit
 streamlit_chat
 bardapi
-os
 
