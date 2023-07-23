@@ -1,0 +1,4 @@
+bardapi==0.1.23a
+os
+streamlit
+streamlit_chat
