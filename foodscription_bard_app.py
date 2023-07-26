@@ -15,7 +15,7 @@ def response_api(prompt):
     return message
 
 def user_input():
-    input_text = st.text_input("Provide the image URL only: ")
+    input_text = st.text_input("Paste Ingredients: ")
     return input_text
 
 if 'generate' not in st.session_state:
@@ -24,13 +24,13 @@ if 'generate' not in st.session_state:
 if 'past' not in st.session_state:
     st.session_state['past'] = []
 
-user_text = user_input()
-engineered_prompt = "identify the image in the link and give ingredients, foodgroup and portion size for each ingredient in table format: " + user_text
+ingredient = user_input()
+engineered_prompt = "From the given ingredients give ingredient to foodgroup mapping in table format: " + ingredient
 
-if user_text:
+if ingredient:
     output = response_api(engineered_prompt)
     st.session_state.generate.append(output)
-    st.session_state.past.append(user_text)
+    st.session_state.past.append(ingredient)
 
 if st.session_state['generate']:
     for i in range(len(st.session_state['generate'])-1,-1,-1):
