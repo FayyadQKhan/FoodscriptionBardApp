@@ -53,23 +53,24 @@ engineered_prompt = "You are a json only output machine give me ingredient and i
 
 if ingredient:
     output = response_api(engineered_prompt)
-    start = output.find('{')
-    end = output.find('}')
-    json_ = output[start:end+1]
+   
     # json_ = json.loads(json_)
     # output = str(output)
     # for line in output:
     #     json_expr = "{"+line.partition("{")[2]
     #     output = json.loads(json_expr)
-    st.write('OK')
-    st.write(json_)
-    print(json_)
+    
     # st.session_state.generate.append(output)
     # st.session_state.past.append(ingredient)
 
     # print(type(output))
 
-
+start = output.find('{')
+end = output.find('}')
+json_ = output[start:end+1]
+st.write('OK')
+st.write(json_)
+# print(json_)
 # print(type(json_))
 # print(json_)
 
