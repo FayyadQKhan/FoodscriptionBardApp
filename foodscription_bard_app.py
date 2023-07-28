@@ -2,7 +2,7 @@ from bardapi import Bard
 import os
 import streamlit as st
 from streamlit_chat import message
-# import json
+import json
 # import re
 
 
@@ -63,6 +63,7 @@ if ingredient:
     #     output = json.loads(json_expr)
 
     st.write(json_)
+    print(json_)
     # st.session_state.generate.append(output)
     # st.session_state.past.append(ingredient)
 
