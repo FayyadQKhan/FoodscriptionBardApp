@@ -61,7 +61,7 @@ if ingredient:
     # for line in output:
     #     json_expr = "{"+line.partition("{")[2]
     #     output = json.loads(json_expr)
-
+    st.write('OK')
     st.write(json_)
     print(json_)
     # st.session_state.generate.append(output)
