@@ -56,7 +56,7 @@ if ingredient:
     start = output.find('{')
     end = output.find('}')
     json_ = output[start:end+1]
-    json_ = json.loads(json_)
+    # json_ = json.loads(json_)
     # output = str(output)
     # for line in output:
     #     json_expr = "{"+line.partition("{")[2]
