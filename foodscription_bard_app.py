@@ -51,7 +51,8 @@ ingredient = user_input()
 # ingredient = input('Enter ingredient: ')
 engineered_prompt = "You are a json only output machine give me ingredient and its corresponding foodgroup in the format {ingredient:foodgroup} where given ingredient is key and foodgroup is value: " + ingredient
 output = ''
-output = response_api(engineered_prompt)
+if ingredient:
+    output = response_api(engineered_prompt)
    
     # json_ = json.loads(json_)
     # output = str(output)
