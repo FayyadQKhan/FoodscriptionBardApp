@@ -50,9 +50,8 @@ def user_input():
 ingredient = user_input()
 # ingredient = input('Enter ingredient: ')
 engineered_prompt = "You are a json only output machine give me ingredient and its corresponding foodgroup in the format {ingredient:foodgroup} where given ingredient is key and foodgroup is value: " + ingredient
-
-if ingredient:
-    output = response_api(engineered_prompt)
+output = ''
+output = response_api(engineered_prompt)
    
     # json_ = json.loads(json_)
     # output = str(output)
@@ -68,6 +67,7 @@ if ingredient:
 start = output.find('{')
 end = output.find('}')
 json_ = output[start:end+1]
+st.write(output)
 st.write('OK')
 st.write(json_)
 # print(json_)
